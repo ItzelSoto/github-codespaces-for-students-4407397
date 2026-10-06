@@ -3,6 +3,7 @@
     "dockerfile": "Dockerfile"
   },
 
+  "postCreateCommand": "curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && sudo apt-get install git-lfs -y && git lfs install",
   "updateContentCommand": "npm install",
   "postAttachCommand": "npm start",
 
@@ -10,7 +11,7 @@
 
   "forwardPorts": [3000],
 
-  // More options on containers.dev
+  // more settings for ports in containers.dev
   "portsAttributes": {
     "3000": {
       "label": "React.js",
